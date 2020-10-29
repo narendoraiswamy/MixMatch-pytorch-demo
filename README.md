@@ -28,6 +28,8 @@ The result obtained fared slightly better than the reported result of the code a
 
 Accuracy: 84.85%, No. of Labeled examples: 250. 
 
+Set the argument `categorize_classes` as True to replicate the results on categorization of cifar10 classes experiment.
+
 The 10 classes in the dataset are divided into 4 super classes. While airplane and ship are categorized under one class as they are non-road transportation mode, the automobile and trucks are categorized under one super class due to very high similarities between them. The remaining 6 classes are further categorized into  more super classes based on the similarities in appearance. The `cat`, `deer`, `dog` and `horse` are categorized to a 4-legged animals while the `bird` and `frog` are categorized into small animals category. Another intuitive way to categorize these classes could be to check the correlation score between the word vectors(eg: Word2vec, glove or fasttext vectors) of these 10 classes and group the similar classes together.
 
 ## Differences made in the code to adapt the changes:
