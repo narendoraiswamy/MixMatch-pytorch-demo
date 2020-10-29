@@ -19,7 +19,6 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 
 import models.wideresnet as models
-import dataset.cifar10 as dataset
 from utils import Bar, Logger, AverageMeter, accuracy, mkdir_p, savefig
 from tensorboardX import SummaryWriter
 from pdb import set_trace as bkpt
@@ -53,7 +52,8 @@ parser.add_argument('--alpha', default=0.75, type=float)
 parser.add_argument('--lambda-u', default=75, type=float)
 parser.add_argument('--T', default=0.5, type=float)
 parser.add_argument('--ema-decay', default=0.999, type=float)
-
+parser.add_argument('--categorize_classes', action='store_true', default=False,
+                    help='to categorizze the classes or not')
 
 args = parser.parse_args()
 state = {k: v for k, v in args._get_kwargs()}
@@ -66,6 +66,12 @@ use_cuda = torch.cuda.is_available()
 if args.manualSeed is None:
     args.manualSeed = random.randint(1, 10000)
 np.random.seed(args.manualSeed)
+
+# To categorize the classes into super classes or not
+if args.categorize_classes == True:
+    import dataset._cifar10 as dataset
+else:
+    import dataset.cifar10 as dataset
 
 best_acc = 0  # best test accuracy
 
