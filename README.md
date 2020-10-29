@@ -3,7 +3,13 @@ This is an unofficial PyTorch implementation of [MixMatch: A Holistic Approach t
 The official Tensorflow implementation is [here](https://github.com/google-research/mixmatch).
 
 The google drive links to the models are provided below for all the trained models. 
-[50 labeled samples](https://drive.google.com/drive/folders/1QpCuJxFnGGDFfCi3hoGCjxIUijEhZX2g?usp=sharing), [100 labeled samples](https://drive.google.com/drive/folders/1Rbw_Aj_DxBCdAAvr_JMQpiyypezWDPRC?usp=sharing), [200 labeled samples](https://drive.google.com/drive/folders/1HZCZ5i7SXaxsl2m0-9PayYX1DDE3BnNG?usp=sharing), [250 labeled samples](https://drive.google.com/drive/folders/1wiZjoo9_l9YseWuGk7ZZv6tBGw1zX1VJ?usp=sharing), [500 labeled samples]( https://drive.google.com/drive/folders/1jUqKXcjVnxLE2E08t3hvB61D3wvLwXGN?usp=sharing), [categorized_classes](https://drive.google.com/drive/folders/1SfUdZI7eUeQV5KHrLpThTnmTLqJkVA3w?usp=sharing)
+
+[50 labeled samples](https://drive.google.com/drive/folders/1QpCuJxFnGGDFfCi3hoGCjxIUijEhZX2g?usp=sharing)
+[100 labeled samples](https://drive.google.com/drive/folders/1Rbw_Aj_DxBCdAAvr_JMQpiyypezWDPRC?usp=sharing)
+[200 labeled samples](https://drive.google.com/drive/folders/1HZCZ5i7SXaxsl2m0-9PayYX1DDE3BnNG?usp=sharing) 
+[250 labeled samples](https://drive.google.com/drive/folders/1wiZjoo9_l9YseWuGk7ZZv6tBGw1zX1VJ?usp=sharing) 
+[500 labeled samples]( https://drive.google.com/drive/folders/1jUqKXcjVnxLE2E08t3hvB61D3wvLwXGN?usp=sharing)
+[categorized_classes](https://drive.google.com/drive/folders/1SfUdZI7eUeQV5KHrLpThTnmTLqJkVA3w?usp=sharing)
 
 The accuracy and loss plots for all the trained models are provided in the folder `figures` by their names. The figure `AccLossPlot_50.png` is the plot for the experiment with 50 labeled samples and so on. 
 
@@ -26,7 +32,8 @@ The 10 classes in the dataset are divided into 4 super classes. While airplane a
 
 ## Differences made in the code to adapt the changes:
 
-For experiment with 50 examples, the batch size is taken to be 48. For experiment with categorized classes, the mapping of class labels are made in the `_cifar10.py` file in `getcifar10`, `train_val_split` functions and in `CIFAR10_labeled` class. 
+For experiment with 50 examples, the batch size is taken to be 48.
+For experiment with categorized classes, the mapping of class labels are made in the `_cifar10.py` file in `getcifar10`, `train_val_split` functions and in `CIFAR10_labeled` class. A dictionary is created wwhich maps the class labels correspondingly(line 143 and line 157 in `_cifar10.py` file.). During categorization, the top5 accuracy becomes top4 accuracy since there are only 4 classes and the top 4 accuracy is 100%(which is obvious and doesnt convey any particular meaning).
 
 
 ## Requirements
