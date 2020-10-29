@@ -4,12 +4,12 @@ The official Tensorflow implementation is [here](https://github.com/google-resea
 
 The google drive links to the models are provided below for all the trained models. 
 
-[50 labeled samples](https://drive.google.com/drive/folders/1QpCuJxFnGGDFfCi3hoGCjxIUijEhZX2g?usp=sharing)
-[100 labeled samples](https://drive.google.com/drive/folders/1Rbw_Aj_DxBCdAAvr_JMQpiyypezWDPRC?usp=sharing)
-[200 labeled samples](https://drive.google.com/drive/folders/1HZCZ5i7SXaxsl2m0-9PayYX1DDE3BnNG?usp=sharing) 
-[250 labeled samples](https://drive.google.com/drive/folders/1wiZjoo9_l9YseWuGk7ZZv6tBGw1zX1VJ?usp=sharing) 
-[500 labeled samples]( https://drive.google.com/drive/folders/1jUqKXcjVnxLE2E08t3hvB61D3wvLwXGN?usp=sharing)
-[categorized_classes](https://drive.google.com/drive/folders/1SfUdZI7eUeQV5KHrLpThTnmTLqJkVA3w?usp=sharing)
+[[50 labeled samples](https://drive.google.com/drive/folders/1QpCuJxFnGGDFfCi3hoGCjxIUijEhZX2g?usp=sharing)]\
+[[100 labeled samples](https://drive.google.com/drive/folders/1Rbw_Aj_DxBCdAAvr_JMQpiyypezWDPRC?usp=sharing)]\
+[[200 labeled samples](https://drive.google.com/drive/folders/1HZCZ5i7SXaxsl2m0-9PayYX1DDE3BnNG?usp=sharing)]\
+[[250 labeled samples](https://drive.google.com/drive/folders/1wiZjoo9_l9YseWuGk7ZZv6tBGw1zX1VJ?usp=sharing)] \
+[[500 labeled samples]( https://drive.google.com/drive/folders/1jUqKXcjVnxLE2E08t3hvB61D3wvLwXGN?usp=sharing)]\
+[[categorized_classes](https://drive.google.com/drive/folders/1SfUdZI7eUeQV5KHrLpThTnmTLqJkVA3w?usp=sharing)]\
 
 The accuracy and loss plots for all the trained models are provided in the folder `figures` by their names. The figure `AccLossPlot_50.png` is the plot for the experiment with 50 labeled samples and so on. 
 
