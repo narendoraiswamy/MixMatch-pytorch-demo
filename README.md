@@ -3,8 +3,9 @@ This is an unofficial PyTorch implementation of [MixMatch: A Holistic Approach t
 The official Tensorflow implementation is [here](https://github.com/google-research/mixmatch).
 
 The google drive links to the models are provided below for all the trained models. 
+[50 labeled samples](https://drive.google.com/drive/folders/1QpCuJxFnGGDFfCi3hoGCjxIUijEhZX2g?usp=sharing), [100 labeled samples](https://drive.google.com/drive/folders/1Rbw_Aj_DxBCdAAvr_JMQpiyypezWDPRC?usp=sharing), [200 labeled samples](https://drive.google.com/drive/folders/1HZCZ5i7SXaxsl2m0-9PayYX1DDE3BnNG?usp=sharing), [250 labeled samples](https://drive.google.com/drive/folders/1wiZjoo9_l9YseWuGk7ZZv6tBGw1zX1VJ?usp=sharing), [500 labeled samples]( https://drive.google.com/drive/folders/1jUqKXcjVnxLE2E08t3hvB61D3wvLwXGN?usp=sharing), [categorized_classes](https://drive.google.com/drive/folders/1SfUdZI7eUeQV5KHrLpThTnmTLqJkVA3w?usp=sharing)
 
-The accuracy and loss plots for all the trained models are provided in the folder 'figures' by their names. The figure 'AccLossPlot_50.png' is the plot for the experiment with 50 labeled samples and so on. 
+The accuracy and loss plots for all the trained models are provided in the folder `figures` by their names. The figure `AccLossPlot_50.png` is the plot for the experiment with 50 labeled samples and so on. 
 
 Experiments on Cifar10 dataset are conducted with the different numbers of labeled samples. i.e: 50, 100, 200, 250 and 500 and also on categorized classes(super classes)
 
@@ -21,9 +22,9 @@ The result obtained fared slightly better than the reported result of the code a
 
 Accuracy: 84.85%, No. of Labeled examples: 250. 
 
-The 10 classes in the dataset are divided into 4 super classes. While airplane and ship are categorized under one class as they are non-road transportation mode, the automobile and trucks are categorized under one super class due to very high similarities between them. The remaining 6 classes are further categorized into  more super classes based on the similarities in appearance. The `cat`, `deer`, `dog` and `horse` are categorized to a 4-legged animals while the `bird` and `frog` are categorizzed into small animals category. Another intuitive way to categorize these classes could be to check the correlation score between the word vectors of these 10 classes and group the similar classes together.
+The 10 classes in the dataset are divided into 4 super classes. While airplane and ship are categorized under one class as they are non-road transportation mode, the automobile and trucks are categorized under one super class due to very high similarities between them. The remaining 6 classes are further categorized into  more super classes based on the similarities in appearance. The `cat`, `deer`, `dog` and `horse` are categorized to a 4-legged animals while the `bird` and `frog` are categorized into small animals category. Another intuitive way to categorize these classes could be to check the correlation score between the word vectors(eg: Word2vec, glove or fasttext vectors) of these 10 classes and group the similar classes together.
 
-Differences made in the code to adapt the changes:
+## Differences made in the code to adapt the changes:
 
 For experiment with 50 examples, the batch size is taken to be 48. For experiment with categorized classes, the mapping of class labels are made in the `_cifar10.py` file in `getcifar10`, `train_val_split` functions and in `CIFAR10_labeled` class. 
 
