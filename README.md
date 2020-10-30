@@ -28,10 +28,10 @@ The result obtained fared slightly better than the reported result of the code a
 
 ## Results obtained on categorization of cifar10 classes(4 super classes) with 250 labeled samples
 
-Naive method: Accuracy: 84.85%, No. of Labeled examples: 250. 
+__Naive method__ : Accuracy: 84.85%, No. of Labeled examples: 250. 
 In this method, I categorized the images into four super classes first(in the get_cifar10 method in `_cifar.py` file) and then used them to chose the labeled samples from these four super classes. However, by doing so, I might be picking more or less samples from one single sub-class and this will lead to imbalance in the labeled samples and will cause the result to decrease. 
 
-Intuitive method: Accuracy: 92.3% (After 300 epochs of training.(Will update once the training finishes)). No. of labeled examples:250
+__Intuitive method__ : Accuracy: 93.2% (After 400 epochs of training.(Will update once the training finishes)). No. of labeled examples:250
 Here, we first pick the labeled samples(5 samples per class) from all the sub 10 classes and make sure that the labeled pool is balanced and has samples from all the categories and then map them in the end at `getitem` method in `cifar10_labeled` class in `_cifar10.py` file. 
 
 Set the argument `categorize_classes` as True to replicate the results on categorization of cifar10 classes experiment.
